@@ -2,7 +2,8 @@
 // const botonCambiarTitulo = document.getElementsByClassName('btn');
 // const botonCambiarTitulo = document.getElementById('btnCambiarTitulo');
 const botonCambiarTitulo = document.querySelector("#btnCambiarTitulo");
-console.log(botonCambiarTitulo);
+const formularioBusqueda = document.querySelector('form');
+console.log(formularioBusqueda);
 
 function cambiarTitulo() {
   console.log("estoy en cambiar el titulo");
@@ -45,6 +46,18 @@ const verMas = () => {
   }
 };
 
+const buscarTexto = (e)=>{
+    e.preventDefault();
+    console.log(e);
+    console.log('estoy en la funcion buscar texto 😎');
+    const inputBusqueda = document.querySelector('input');
+    console.log(inputBusqueda.value);
+    formularioBusqueda.reset();
+}
+
 //agregamos un evento el cúal llama a una funcion
 
 botonCambiarTitulo.addEventListener("click", cambiarTitulo);
+// si tengo que llamar a una funcion con parametro la guardo en una funcion anonima
+// formularioBusqueda.addEventListener('submit', ()=>{buscarTexto('asdasda')})
+formularioBusqueda.addEventListener('submit', buscarTexto);
