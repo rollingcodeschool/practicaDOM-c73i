@@ -10,6 +10,9 @@ function cambiarTitulo(){
     const tituloPrincipal = document.querySelector('h1');
     //modifico ese titulo
     tituloPrincipal.innerHTML = 'Titulo <b> nuevo </b>';
+    // tituloPrincipal.innerText = 'Titulo nuevo';
+    console.log(tituloPrincipal.innerText)
+    tituloPrincipal.className = 'display-1 tituloPrincipal'
 }
 
 
